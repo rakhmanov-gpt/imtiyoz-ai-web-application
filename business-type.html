@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Setup - Business Type</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="fonts/css/satoshi.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Satoshi-Regular", "Satoshi-Variable", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Satoshi-Regular', 'Satoshi-Variable', sans-serif;
+        }
+        .radio-dot-svg {
+            --radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27%231152d4%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');
+        }
+    </style>
+<style>
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col radio-dot-svg">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-10 bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<button aria-label="Orqaga" class="text-[#111318] dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" type="button" onclick="history.back()">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Profilni sozlash</h2>
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full flex flex-col">
+<!-- Progress Bar Section -->
+<div class="flex flex-col gap-3 p-4 bg-white dark:bg-background-dark/50">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-[#111318] dark:text-white text-sm font-medium leading-normal">Bosqich</p>
+<p class="text-primary dark:text-primary text-sm font-medium leading-normal"><span id="step-count">1</span> / 3</p>
+</div>
+<div class="rounded-full bg-gray-200 dark:bg-gray-700 h-2 overflow-hidden">
+<div class="h-full rounded-full bg-primary" id="step-progress" style="width: 33%;"></div>
+</div>
+</div>
+<section class="flex flex-col gap-3 p-4">
+<div class="step-section" data-step="1">
+<h1 class="text-[#111318] dark:text-white tracking-tight text-2xl font-bold leading-tight mb-2">Biznes turini tanlang</h1>
+<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed mb-4">
+                Profilingizni moslashtirish va mos keladigan imtiyozlarni topish uchun biznesingiz shaklini belgilang
+            </p>
+<!-- Option 1: YTT -->
+<label class="group relative flex items-center gap-4 rounded-xl border-2 border-solid border-gray-200 dark:border-gray-800 p-4 cursor-pointer hover:border-primary/50 transition-all bg-white dark:bg-gray-900 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input checked="" class="h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="business-type" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-[#111318] dark:text-white text-base font-semibold leading-normal">Yakka tartibdagi tadbirkor</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Yakka tartibda faoliyat yurituvchi tadbirkorlar uchun</p>
+</div>
+<div class="text-primary opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</label>
+<!-- Option 2: MCHJ -->
+<label class="group relative flex items-center gap-4 rounded-xl border-2 border-solid border-gray-200 dark:border-gray-800 p-4 cursor-pointer hover:border-primary/50 transition-all bg-white dark:bg-gray-900 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="business-type" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-[#111318] dark:text-white text-base font-semibold leading-normal">MCHJ</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Mas'uliyati cheklangan jamiyatlar uchun</p>
+</div>
+<div class="text-primary opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</label>
+<!-- Option 3: Self-employed -->
+<label class="group relative flex items-center gap-4 rounded-xl border-2 border-solid border-gray-200 dark:border-gray-800 p-4 cursor-pointer hover:border-primary/50 transition-all bg-white dark:bg-gray-900 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="business-type" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-[#111318] dark:text-white text-base font-semibold leading-normal">O‘zini o‘zi band qilgan</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Mustaqil ishlovchi jismoniy shaxslar uchun</p>
+</div>
+<div class="text-primary opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</label>
+<!-- Option 4: Startup -->
+<label class="group relative flex items-center gap-4 rounded-xl border-2 border-solid border-gray-200 dark:border-gray-800 p-4 cursor-pointer hover:border-primary/50 transition-all bg-white dark:bg-gray-900 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="business-type" type="radio"/>
+<div class="flex grow flex-col">
+<p class="text-[#111318] dark:text-white text-base font-semibold leading-normal">Startap</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Innovatsion va o'suvchi yangi loyihalar uchun</p>
+</div>
+<div class="text-primary opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</label>
+</div>
+<div class="step-section hidden" data-step="2">
+<h1 class="text-[#111318] dark:text-white tracking-tight text-2xl font-bold leading-tight mb-2">Sohani tanlang</h1>
+<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed mb-4">
+                Faoliyat yo'nalishingizga mos imtiyozlarni topish uchun sohani belgilang
+            </p>
+<label class="group relative flex items-center gap-4 rounded-xl border-2 border-solid border-gray-200 dark:border-gray-800 p-4 cursor-pointer hover:border-primary/50 transition-all bg-white dark:bg-gray-900 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input checked="" class="h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="sector" type="radio" value="IT va Raqamli texnologiyalar"/>
+<div class="flex grow flex-col">
+<p class="text-[#111318] dark:text-white text-base font-semibold leading-normal">IT va Raqamli texnologiyalar</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Raqamli mahsulotlar va xizmatlar</p>
+</div>
+<div class="text-primary opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</label>
+<label class="group relative flex items-center gap-4 rounded-xl border-2 border-solid border-gray-200 dark:border-gray-800 p-4 cursor-pointer hover:border-primary/50 transition-all bg-white dark:bg-gray-900 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="sector" type="radio" value="Qishloq xo'jaligi"/>
+<div class="flex grow flex-col">
+<p class="text-[#111318] dark:text-white text-base font-semibold leading-normal">Qishloq xo'jaligi</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Agro va fermerlik faoliyati</p>
+</div>
+<div class="text-primary opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</label>
+<label class="group relative flex items-center gap-4 rounded-xl border-2 border-solid border-gray-200 dark:border-gray-800 p-4 cursor-pointer hover:border-primary/50 transition-all bg-white dark:bg-gray-900 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="sector" type="radio" value="Ishlab chiqarish"/>
+<div class="flex grow flex-col">
+<p class="text-[#111318] dark:text-white text-base font-semibold leading-normal">Ishlab chiqarish</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Sanoat va ishlab chiqarish</p>
+</div>
+<div class="text-primary opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</label>
+<label class="group relative flex items-center gap-4 rounded-xl border-2 border-solid border-gray-200 dark:border-gray-800 p-4 cursor-pointer hover:border-primary/50 transition-all bg-white dark:bg-gray-900 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<input class="h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="sector" type="radio" value="Xizmat ko'rsatish"/>
+<div class="flex grow flex-col">
+<p class="text-[#111318] dark:text-white text-base font-semibold leading-normal">Xizmat ko'rsatish</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Servis va xizmatlar</p>
+</div>
+<div class="text-primary opacity-0 group-has-[:checked]:opacity-100">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+</label>
+</div>
+<div class="step-section hidden" data-step="3">
+<h1 class="text-[#111318] dark:text-white tracking-tight text-2xl font-bold leading-tight mb-2">Imtiyoz turini tanlang</h1>
+<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-relaxed mb-4">
+                Sizga mos imtiyozlarni aniqlash uchun turini tanlang
+            </p>
+<div class="flex flex-wrap gap-2">
+<button class="benefit-chip px-4 py-2 rounded-full bg-primary text-white text-sm font-medium" type="button" data-benefit="Soliq">Soliq</button>
+<button class="benefit-chip px-4 py-2 rounded-full bg-background-light dark:bg-gray-800 text-[#111318] dark:text-gray-300 text-sm font-medium border border-[#dbdfe6] dark:border-gray-700" type="button" data-benefit="Grant">Grant</button>
+<button class="benefit-chip px-4 py-2 rounded-full bg-background-light dark:bg-gray-800 text-[#111318] dark:text-gray-300 text-sm font-medium border border-[#dbdfe6] dark:border-gray-700" type="button" data-benefit="Subsidiya">Subsidiya</button>
+<button class="benefit-chip px-4 py-2 rounded-full bg-background-light dark:bg-gray-800 text-[#111318] dark:text-gray-300 text-sm font-medium border border-[#dbdfe6] dark:border-gray-700" type="button" data-benefit="Imtiyozli kredit">Imtiyozli kredit</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Button -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 p-4 pb-[calc(env(safe-area-inset-bottom)+2rem)] z-20">
+<div class="max-w-md mx-auto flex gap-3">
+<button class="flex-1 bg-white dark:bg-gray-900 text-[#111318] dark:text-white border border-gray-200 dark:border-gray-700 font-medium py-4 px-6 rounded-xl" id="step-back" type="button" disabled="">Orqaga</button>
+<button class="flex-[1.5] bg-primary text-white font-medium py-4 px-6 rounded-xl flex items-center justify-center gap-2" id="step-next" type="button">
+                Davom etish
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+  const sections = Array.from(document.querySelectorAll(".step-section"));
+  const stepCount = document.getElementById("step-count");
+  const progressBar = document.getElementById("step-progress");
+  const backButton = document.getElementById("step-back");
+  const nextButton = document.getElementById("step-next");
+  const benefitChips = Array.from(document.querySelectorAll(".benefit-chip"));
+
+  let currentStep = 1;
+
+  const updateStepUI = () => {
+    sections.forEach((section) => {
+      const step = Number(section.getAttribute("data-step"));
+      section.classList.toggle("hidden", step !== currentStep);
+    });
+
+    stepCount.textContent = String(currentStep);
+    progressBar.style.width = `${Math.round((currentStep / 3) * 100)}%`;
+    backButton.disabled = currentStep === 1;
+    backButton.classList.toggle("opacity-60", currentStep === 1);
+    backButton.classList.toggle("cursor-not-allowed", currentStep === 1);
+
+    if (currentStep === 3) {
+      nextButton.innerHTML = "Tugatish";
+    } else {
+      nextButton.innerHTML = 'Davom etish <span class="material-symbols-outlined text-lg">arrow_forward</span>';
+    }
+  };
+
+  const toggleChip = (chip) => {
+    const isActive = chip.classList.contains("bg-primary");
+    chip.classList.toggle("bg-primary", !isActive);
+    chip.classList.toggle("text-white", !isActive);
+    chip.classList.toggle("bg-background-light", isActive);
+    chip.classList.toggle("dark:bg-gray-800", isActive);
+    chip.classList.toggle("text-[#111318]", isActive);
+    chip.classList.toggle("dark:text-gray-300", isActive);
+  };
+
+  benefitChips.forEach((chip) => {
+    chip.addEventListener("click", () => toggleChip(chip));
+  });
+
+  backButton.addEventListener("click", () => {
+    if (currentStep > 1) {
+      currentStep -= 1;
+      updateStepUI();
+    }
+  });
+
+  nextButton.addEventListener("click", () => {
+    if (currentStep < 3) {
+      currentStep += 1;
+      updateStepUI();
+      return;
+    }
+
+    const businessType = document.querySelector("input[name='business-type']:checked")?.parentElement?.querySelector("p")?.textContent?.trim() || "";
+    const sector = document.querySelector("input[name='sector']:checked")?.value || "";
+    const benefitType = benefitChips
+      .filter((chip) => chip.classList.contains("bg-primary"))
+      .map((chip) => chip.dataset.benefit)
+      .filter(Boolean);
+
+    document.cookie = `businessProfile=${encodeURIComponent(JSON.stringify({
+      businessType,
+      sector,
+      benefitType
+    }))}; path=/; max-age=1209600`;
+
+    window.location.href = "dashboard.html";
+  });
+
+  updateStepUI();
+</script>
+</body></html>
+
+
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saqlangan Imtiyozlar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="fonts/css/satoshi.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Satoshi-Regular", "Satoshi-Variable", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white min-h-screen">
+<div class="relative flex min-h-screen min-h-[100dvh] w-full max-w-[430px] mx-auto flex-col bg-white dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-10 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<button class="text-[#111318] dark:text-white flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" type="button" onclick="history.back()">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Saqlangan</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-primary hover:bg-primary/10 transition-colors" title="Saralash">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Summary -->
+<div class="p-4">
+<h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">Saqlangan imtiyozlar</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Tez-tez murojaat qiladigan hujjat va imtiyozlar ro'yxati</p>
+</div>
+<!-- Saved Cards -->
+<div class="flex flex-col gap-3 px-4 pb-4">
+<div class="flex items-center gap-4 bg-white dark:bg-gray-900/50 p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="text-blue-600 flex items-center justify-center rounded-lg bg-blue-50 dark:bg-blue-900/20 shrink-0 size-12">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-[#111318] dark:text-white text-sm font-bold leading-snug">IT-Park rezidentlari uchun imtiyozlar</p>
+<p class="text-[#616f89] dark:text-gray-400 text-xs font-normal">Ijtimoiy soliq 12% dan 1% gacha</p>
+</div>
+<a class="flex items-center justify-center rounded-full size-10 text-primary hover:bg-primary/10" href="benefits.html">
+<span class="material-symbols-outlined">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Empty State Hint -->
+<div class="px-4 pb-6">
+<div class="rounded-xl border border-dashed border-gray-200 dark:border-gray-700 p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+Saqlanganlar ro'yxatini kengaytirish uchun imtiyozlarni belgilab boring.
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white/80 dark:bg-[#1a2130]/80 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 px-6 py-3 pb-8 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-gray-400" href="dashboard.html">
+<span class="material-symbols-outlined text-[26px]">grid_view</span>
+<span class="text-[10px] font-medium">Asosiy</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="alerts.html">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+<span class="text-[10px] font-medium">Imtiyozlar</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="ai-chat.html">
+<div class="bg-primary size-12 rounded-full flex items-center justify-center text-white shadow-lg -mt-8 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-[28px]">smart_toy</span>
+</div>
+<span class="text-[10px] font-medium">AI Assistant</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="saved.html">
+<span class="material-symbols-outlined text-[26px]">bookmark</span>
+<span class="text-[10px] font-bold">Saqlangan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="profile.html">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</div>
+</body></html>
+
+

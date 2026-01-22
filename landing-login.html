@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="fonts/css/satoshi.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,FILL@0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Satoshi-Regular", "Satoshi-Variable", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Imtiyoz AI Landing &amp; Login</title>
+<style>
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white antialiased min-h-screen flex flex-col">
+<!-- Main Container -->
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / Top Bar -->
+<div class="flex items-center bg-white dark:bg-[#1c212e] p-4 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="w-10"></div> <!-- Spacer for symmetry -->
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">
+                Imtiyoz AI
+            </h2>
+<div class="w-10 flex justify-end">
+<span class="material-symbols-outlined text-gray-500">info</span>
+</div>
+</div>
+<!-- Content Area -->
+<main class="flex-1 flex flex-col items-center justify-center p-4">
+<!-- Central Card -->
+<div class="w-full max-w-md bg-white dark:bg-[#1c212e] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 sm:p-8 flex flex-col gap-6">
+<!-- Illustration -->
+<div class="w-full aspect-[4/3] bg-primary/5 dark:bg-primary/10 rounded-lg flex items-center justify-center relative overflow-hidden">
+<!-- Abstract representation of growth and documents -->
+<div class="absolute inset-0 opacity-20 bg-gradient-to-tr from-primary to-transparent" data-alt="Abstract blue gradient background for growth illustration"></div>
+<div class="relative flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-7xl" style="font-variation-settings: 'FILL' 1;">
+                            account_balance
+                        </span>
+<div class="mt-4 flex gap-2">
+<span class="material-symbols-outlined text-primary/60 text-3xl">description</span>
+<span class="material-symbols-outlined text-green-500 text-3xl">trending_up</span>
+<span class="material-symbols-outlined text-primary/60 text-3xl">verified</span>
+</div>
+</div>
+</div>
+<!-- Headline -->
+<div class="space-y-2">
+<h3 class="text-[#111318] dark:text-white tracking-light text-2xl font-bold leading-tight text-center">
+                        Tadbirkorlar uchun davlat imtiyozlarini topuvchi aqlli yordamchi
+                    </h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 text-center px-4">
+                        Biznesingizni rivojlantirish uchun barcha soliq va bojxona imtiyozlarini bir joyda toping
+                    </p>
+</div>
+<!-- CTA Section -->
+<div class="flex flex-col gap-3 pt-4">
+<!-- Primary Button: One ID -->
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white gap-3 transition-opacity hover:opacity-90 active:scale-[0.98]" id="oneid-open" type="button">
+<span class="material-symbols-outlined text-white">badge</span>
+<span class="text-base font-bold leading-normal tracking-[0.015em] truncate">One ID orqali kirish</span>
+</button>
+<!-- Secondary Button: Telegram -->
+<a class="flex min-w-[84px] cursor-not-allowed items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-white text-[#111318] dark:text-white border border-gray-200 dark:border-gray-700 gap-3 opacity-60 pointer-events-none" aria-disabled="true" tabindex="-1">
+<span class="text-base font-bold leading-normal tracking-[0.015em] truncate">Telegram orqali kirish</span>
+</a>
+<!-- Secondary Button: OTP -->
+<button class="flex min-w-[84px] cursor-not-allowed items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-transparent text-[#111318] dark:text-white border border-gray-200 dark:border-gray-700 opacity-60" disabled="">
+<span class="text-base font-bold leading-normal tracking-[0.015em] truncate">Telefon orqali kirish</span>
+</button>
+</div>
+<!-- Trust Badges -->
+<div class="flex items-center justify-center gap-4 pt-2 border-t border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-1.5 grayscale opacity-60">
+<span class="material-symbols-outlined text-xs">shield</span>
+<span class="text-[10px] uppercase tracking-wider font-bold">Xavfsiz ulanish</span>
+</div>
+<div class="flex items-center gap-1.5 grayscale opacity-60">
+<span class="material-symbols-outlined text-xs">database</span>
+<span class="text-[10px] uppercase tracking-wider font-bold">Real-vaqt bazasi</span>
+</div>
+</div>
+</div>
+<!-- Footer Links -->
+<div class="mt-8 flex flex-col items-center gap-2">
+<div class="flex gap-4">
+<a class="text-xs text-gray-400 hover:text-primary transition-colors" href="#">Foydalanish shartlari</a>
+<a class="text-xs text-gray-400 hover:text-primary transition-colors" href="#">Maxfiylik siyosati</a>
+</div>
+<p class="text-[10px] text-gray-400 text-center mt-2">
+                    © 2024 Imtiyoz AI. Barcha huquqlar himoyalangan.
+                </p>
+</div>
+</main>
+<!-- Bottom Safe Area (iOS style) -->
+<div class="h-8 bg-transparent"></div>
+</div>
+<!-- One ID Bottom Sheet -->
+<div class="fixed inset-0 z-[60] hidden" id="oneid-sheet" aria-hidden="true">
+<div class="absolute inset-0 bg-black/40" data-oneid-close></div>
+<div class="absolute bottom-0 left-1/2 w-full max-w-[430px] -translate-x-1/2 bg-white dark:bg-[#1c212e] rounded-t-2xl p-4 pb-8 shadow-2xl">
+<div class="flex items-center justify-between">
+<h3 class="text-[#111318] dark:text-white text-lg font-bold">One ID orqali kirish</h3>
+<button class="text-[#111318] dark:text-white size-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" type="button" data-oneid-close>
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Login va parolingizni kiriting</p>
+<form class="mt-4 flex flex-col gap-3" id="oneid-form">
+<label class="flex flex-col gap-2">
+<span class="text-sm font-semibold text-[#111318] dark:text-white">Login</span>
+<input class="h-12 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 text-sm text-[#111318] dark:text-white focus:outline-none focus:ring-2 focus:ring-primary" name="login" placeholder="Login" required="" type="text"/>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-sm font-semibold text-[#111318] dark:text-white">Parol</span>
+<input class="h-12 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 text-sm text-[#111318] dark:text-white focus:outline-none focus:ring-2 focus:ring-primary" name="password" placeholder="Parol" required="" type="password"/>
+</label>
+<button class="mt-2 h-12 rounded-lg bg-primary text-white font-medium transition-opacity hover:opacity-90" type="submit">Kirish</button>
+<p class="text-sm text-red-500 hidden" id="oneid-error"></p>
+<p class="text-sm text-emerald-600 hidden" id="oneid-success">Ma'lumotlar saqlandi.</p>
+</form>
+</div>
+</div>
+<script>
+  const oneIdOpen = document.getElementById("oneid-open");
+  const oneIdSheet = document.getElementById("oneid-sheet");
+  const oneIdForm = document.getElementById("oneid-form");
+  const oneIdError = document.getElementById("oneid-error");
+  const oneIdSuccess = document.getElementById("oneid-success");
+
+  const closeSheet = () => {
+    oneIdSheet.classList.add("hidden");
+    oneIdSheet.setAttribute("aria-hidden", "true");
+  };
+
+  const openSheet = () => {
+    oneIdSheet.classList.remove("hidden");
+    oneIdSheet.setAttribute("aria-hidden", "false");
+    oneIdError.classList.add("hidden");
+    oneIdSuccess.classList.add("hidden");
+  };
+
+  oneIdOpen?.addEventListener("click", openSheet);
+  oneIdSheet.querySelectorAll("[data-oneid-close]").forEach((el) => {
+    el.addEventListener("click", closeSheet);
+  });
+
+  oneIdForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    oneIdError.classList.add("hidden");
+    oneIdSuccess.classList.add("hidden");
+
+    const formData = new FormData(oneIdForm);
+    const payload = {
+      login: String(formData.get("login") || "").trim(),
+      password: String(formData.get("password") || "")
+    };
+
+    try {
+      const response = await fetch("backend/one-id-database.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error("Server javobi xato.");
+      }
+
+      const data = await response.json();
+      const profileData = {
+        pin: data?.pin,
+        document: data?.document,
+        surnameLatin: data?.surnameLatin,
+        nameLatin: data?.nameLatin,
+        patronymicLatin: data?.patronymicLatin,
+        birthDate: data?.birthDate,
+        birthPlace: data?.birthPlace,
+        citizenship: data?.citizenship,
+        phone: data?.phone
+      };
+      document.cookie = `oneIdProfile=${encodeURIComponent(JSON.stringify(profileData))}; path=/; max-age=1209600`;
+      const photo = data?.photo;
+      if (photo) {
+        sessionStorage.setItem("oneIdPhoto", photo);
+      }
+      oneIdSuccess.classList.remove("hidden");
+      setTimeout(() => {
+        window.location.href = "business-type.html";
+      }, 500);
+    } catch (error) {
+      oneIdError.textContent = "Kirish amalga oshmadi. Qayta urinib ko'ring.";
+      oneIdError.classList.remove("hidden");
+    }
+  });
+</script>
+</body></html>
+
+
+

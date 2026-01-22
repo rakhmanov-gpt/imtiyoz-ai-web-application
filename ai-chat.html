@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Imtiyoz AI - Tadbirkorlar uchun yordamchi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="fonts/css/satoshi.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Satoshi-Regular", "Satoshi-Variable", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Satoshi-Regular', 'Satoshi-Variable', sans-serif;
+        }
+        .message-shadow {
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        .glass-header {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+<style>
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<button class="text-[#111318] dark:text-white flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" type="button" onclick="history.back()">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Imtiyoz AI</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-primary hover:bg-primary/10 transition-colors" title="Menyu">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</header>
+<!-- Chat Content -->
+<main class="flex-1 overflow-y-auto p-4 space-y-6">
+<!-- Section Header / Subtext -->
+<div class="flex flex-col items-center">
+<h4 class="text-[#616f89] dark:text-gray-400 text-sm font-medium leading-normal tracking-[0.015em] p-4 text-center bg-white/50 dark:bg-gray-800/50 rounded-full">
+                Savolingizni yozing yoki filtrdan foydalaning
+            </h4>
+</div>
+<!-- User Message -->
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-col gap-1 items-end max-w-[85%]">
+<p class="text-[#616f89] dark:text-gray-400 text-[12px] font-semibold leading-normal mr-1">Tadbirkor</p>
+<div class="text-base font-normal leading-relaxed rounded-2xl rounded-tr-none p-4 bg-primary text-white message-shadow">
+                    Samarqandda IT xizmatlari uchun qanday imtiyozlar bor?
+                </div>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 h-8 border-2 border-white dark:border-gray-800 shrink-0" data-alt="User profile avatar smiling young entrepreneur" id="chat-user-avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1eif58-Tlb90VMuq34HwxCL7mNIbOnDy08LLGNYTxNE4UPL_q99ci_johu0xJ3wmWiOy9D1l4PlOYIYzcNRFizHcDzEJeoyBC5CLZZgzBGfgme4GBzQyco4XqctYnsJqAG730A0QKTlUWZJC9h0iHIct5PgaMVRaWk7hdKFvhsAxfcAk12Yq6Nb2f6U8rwvsqQXOY7XnexrygwMuqrRwajvkVA6XrZDvfQ_C0TJ8S1rVxOcpSLH3EsBhGpGBvx6A-bk9FiQtrSF88");'>
+</div>
+</div>
+<!-- AI Message & Card -->
+<div class="flex gap-3 max-w-[95%]">
+<div class="bg-primary/10 dark:bg-primary/20 flex items-center justify-center rounded-full w-8 h-8 shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+</div>
+<div class="flex flex-1 flex-col items-stretch gap-3">
+<div class="flex flex-col gap-1">
+<p class="text-[#111318] dark:text-white text-[12px] font-bold leading-tight ml-1">Imtiyoz AI</p>
+<div class="bg-white dark:bg-gray-800 text-[#111318] dark:text-gray-200 text-base font-normal leading-relaxed rounded-2xl rounded-tl-none p-4 message-shadow border border-gray-100 dark:border-gray-700">
+                        Siz uchun quyidagi imtiyozlar va dasturlar mavjud:
+                    </div>
+</div>
+<!-- Benefit Card -->
+<div class="@container w-full">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Modern tech office building in Samarkand" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDg3SDVRs5ZlsJ0yTvpx6MYGQoQyL1VMKdpxX7ipjsn7-nBc3T5Ci4WAwCT_nabeChcsBW-j5jggBuMf73EVo2Ym-zd8vqS7Z378sbQEjt4zZieO4w58oXS8GUsOXzclUGSm9UuKwVru7zt6d4FXwPoTmNTpXZ2IwVsc7W3ZXS0vFsqLMDz6kyhaHDc2MFhqFutKxKtRLnv0amopY4VdxTocGiOe-wiLl3370nOx4ZftsmseinJ4MMuVi53YIL9dCRawf2G-t7HkSG2");'>
+<div class="w-full h-full bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+<div class="flex gap-2">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Soliq</span>
+<span class="bg-green-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Grant</span>
+</div>
+</div>
+</div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-3 p-4">
+<p class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                                IT-Park rezidentlari uchun maxsus imtiyozlar paketi
+                            </p>
+<div class="flex flex-col gap-2">
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">
+                                    â€¢ Daromad solig'i 7,5% gacha kamaytirilgan.<br/>
+                                    â€¢ Ijtimoiy soliq 0% qilib belgilangan.<br/>
+                                    â€¢ Bojxona to'lovlaridan ozod etish (uskunalar uchun).
+                                </p>
+<p class="text-[#616f89] dark:text-gray-400 text-xs italic font-normal leading-normal">
+                                    Samarqand va boshqa hududlar uchun amal qiladi.
+                                </p>
+</div>
+<a class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-white text-sm font-medium leading-normal hover:bg-primary/90 transition-colors" href="benefits.html">
+<span class="truncate">Batafsil ko‘rish</span>
+<span class="material-symbols-outlined ml-2 text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h-40"></div> <!-- Spacer for footer -->
+</main>
+<!-- Bottom Input Bar -->
+<footer class="fixed bottom-[calc(env(safe-area-inset-bottom)+5rem)] left-0 right-0 bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 p-4 pb-[calc(env(safe-area-inset-bottom)+1rem)]">
+<div class="max-w-4xl mx-auto flex items-center gap-2">
+<button class="flex items-center justify-center rounded-xl min-w-[48px] h-12 bg-gray-100 dark:bg-gray-800 text-[#111318] dark:text-white">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<div class="relative flex-1">
+<input class="w-full h-12 bg-gray-100 dark:bg-gray-800 border-none rounded-xl px-4 pr-12 text-base focus:ring-2 focus:ring-primary dark:text-white placeholder:text-gray-500" placeholder="Masalan: Samarqandda IT xizmatlari..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-8 h-8 bg-primary text-white rounded-lg">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white/80 dark:bg-[#1a2130]/80 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 px-6 py-3 pb-8 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-gray-400" href="dashboard.html">
+<span class="material-symbols-outlined text-[26px]">grid_view</span>
+<span class="text-[10px] font-bold">Asosiy</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="alerts.html">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+<span class="text-[10px] font-medium">Imtiyozlar</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="ai-chat.html">
+<div class="bg-primary size-12 rounded-full flex items-center justify-center text-white shadow-lg -mt-8 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-[28px]">smart_toy</span>
+</div>
+<span class="text-[10px] font-bold">AI Assistant</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="saved.html">
+<span class="material-symbols-outlined text-[26px]">bookmark</span>
+<span class="text-[10px] font-medium">Saqlangan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="profile.html">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</div>
+<script>
+  const storedPhoto = sessionStorage.getItem("oneIdPhoto");
+  if (storedPhoto) {
+    const chatAvatar = document.getElementById("chat-user-avatar");
+    if (chatAvatar) {
+      chatAvatar.style.backgroundImage = `url("data:image/jpeg;base64,${storedPhoto}")`;
+    }
+  }
+</script>
+</body></html>
+
+
+
+
+
+
+

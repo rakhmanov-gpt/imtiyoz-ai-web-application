@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile &amp; Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="fonts/css/satoshi.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Satoshi-Regular", "Satoshi-Variable", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Satoshi-Regular', 'Satoshi-Variable', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+<div class="relative mx-auto max-w-[480px] min-h-screen bg-white dark:bg-background-dark flex flex-col shadow-xl">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-10 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<button class="text-[#111318] dark:text-white flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" type="button" onclick="history.back()">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Profil</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-primary hover:bg-primary/10 transition-colors" title="Sozlamalar">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- ProfileHeader -->
+<div class="flex p-4 @container bg-white dark:bg-background-dark">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-primary/10" data-alt="Professional profile photo of a male entrepreneur" id="profile-photo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWyyzR7pTDCmkCStE9MZgkyeCcmoKxKkcrXmlWVkmTaQ-hulbM9gYj1vNdHpUJd8vOErO4RuyL4I7mYE3-pW7cRbzedzX6mInPfxx2UJI-pVFjz_unJIPHqfZF9p8ego66M-0nXadMwC4tvTs-ZW3h6Hii8lRFSUAYKHuau2wGeOQy4s8117f6t9xakGcJILXJcNcl0FF3QrPzk3p7T7D7IwX2gwOTA0JPQ8EJ_RgMmut-9Q_1Ag4kRwxSVT4q-sJ49cuFRItl-AyW");'>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-[#111318] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] text-center" id="profile-name">Anvar G'ulomov</p>
+<p class="text-[#616f89] dark:text-gray-400 text-base font-normal leading-normal text-center" id="profile-role">00000000000000</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: User Details -->
+<div class="bg-background-light dark:bg-background-dark/50 h-2"></div>
+<h3 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] p-4">Foydalanuvchi ma'lumotlari</h3>
+<div class="flex flex-col">
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 border-b border-gray-50 dark:border-gray-800">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">badge</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">PIN</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2" id="user-pin">-</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 border-b border-gray-50 dark:border-gray-800">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Hujjat</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2" id="user-document">-</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 border-b border-gray-50 dark:border-gray-800">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Tug'ilgan sana</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2" id="user-birthdate">-</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 border-b border-gray-50 dark:border-gray-800">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Tug'ilgan joy</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2" id="user-birthplace">-</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 border-b border-gray-50 dark:border-gray-800">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Fuqarolik</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2" id="user-citizenship">-</p>
+</div>
+</div>
+</div>
+<!-- Section: Business Details -->
+<div class="bg-background-light dark:bg-background-dark/50 h-2"></div>
+<h3 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] p-4">Tadbirkorlik ma'lumotlari</h3>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">badge</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Biznes turi</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2" id="biz-type">Noma'lum</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">category</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Soha</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2" id="biz-sector">Noma'lum</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">tune</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Imtiyoz turi</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2" id="biz-benefit">Noma'lum</p>
+</div>
+</div>
+<!-- Section: Saved Benefits -->
+<div class="bg-background-light dark:bg-background-dark/50 h-2"></div>
+<div class="flex justify-between items-center p-4" id="saved">
+<h3 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Saqlangan IT-Park imtiyozlari</h3>
+<a class="text-primary text-sm font-medium" href="saved.html">Hammasi</a>
+</div>
+<div class="flex flex-col px-4 gap-3 mb-4">
+<a class="flex items-center gap-4 bg-white dark:bg-background-dark p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm" href="benefits.html">
+<div class="text-blue-600 flex items-center justify-center rounded-lg bg-blue-50 dark:bg-blue-900/20 shrink-0 size-12">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-[#111318] dark:text-white text-sm font-bold leading-snug">IT-Park rezidentlari uchun imtiyozlar</p>
+<p class="text-[#616f89] dark:text-gray-400 text-xs font-normal">Ijtimoiy soliq 12% dan 1% gacha</p>
+</div>
+<span class="material-symbols-outlined text-primary">bookmark_added</span>
+</a>
+</div>
+<!-- Section: Settings -->
+<div class="bg-background-light dark:bg-background-dark/50 h-2"></div>
+<h3 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] p-4">Sozlamalar</h3>
+<!-- Language Switcher -->
+<div class="flex items-center justify-between bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 border-b border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-[#616f89] dark:text-gray-400 flex items-center justify-center rounded-lg bg-[#f0f2f4] dark:bg-gray-800 shrink-0 size-12">
+<span class="material-symbols-outlined">language</span>
+</div>
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal">Tilni tanlash</p>
+</div>
+<div class="flex bg-[#f0f2f4] dark:bg-gray-800 p-1 rounded-lg">
+<button class="px-3 py-1 rounded bg-white dark:bg-primary text-[#111318] dark:text-white text-sm font-medium shadow-sm">UZ</button>
+<button class="px-3 py-1 rounded text-[#616f89] dark:text-gray-400 text-sm font-medium">RU</button>
+</div>
+</div>
+<!-- Notification Setting -->
+<div class="flex items-center justify-between bg-white dark:bg-background-dark px-4 min-h-[72px] py-2">
+<div class="flex items-center gap-4">
+<div class="text-[#616f89] dark:text-gray-400 flex items-center justify-center rounded-lg bg-[#f0f2f4] dark:bg-gray-800 shrink-0 size-12">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal">Bildirishnomalar</p>
+</div>
+<div class="w-10 h-6 flex items-center bg-primary rounded-full p-1 cursor-pointer">
+<div class="bg-white w-4 h-4 rounded-full translate-x-4"></div>
+</div>
+</div>
+<!-- Logout Button -->
+<div class="mt-auto p-4 pb-28">
+<a class="w-full flex items-center justify-center gap-2 rounded-xl h-14 bg-red-50 dark:bg-red-950/20 text-red-600 dark:text-red-400 font-medium transition-colors hover:bg-red-100" href="landing-login.html">
+<span class="material-symbols-outlined">logout</span>
+<span>Tizimdan chiqish</span>
+</a>
+<p class="text-center text-[#616f89] dark:text-gray-500 text-xs mt-4">Versiya 2.4.0 (Build 102)</p>
+</div>
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white/80 dark:bg-[#1a2130]/80 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 px-6 py-3 pb-8 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-gray-400" href="dashboard.html">
+<span class="material-symbols-outlined text-[26px]">grid_view</span>
+<span class="text-[10px] font-bold">Asosiy</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="alerts.html">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+<span class="text-[10px] font-medium">Imtiyozlar</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="ai-chat.html">
+<div class="bg-primary size-12 rounded-full flex items-center justify-center text-white shadow-lg -mt-8 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-[28px]">smart_toy</span>
+</div>
+<span class="text-[10px] font-medium">AI Assistant</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="saved.html">
+<span class="material-symbols-outlined text-[26px]">bookmark</span>
+<span class="text-[10px] font-medium">Saqlangan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="profile.html">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-bold">Profil</span>
+</a>
+</div>
+<script>
+  const getCookie = (name) => {
+    const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
+    return match ? decodeURIComponent(match[2]) : "";
+  };
+
+  const profileDataRaw = getCookie("oneIdProfile");
+  if (profileDataRaw) {
+    try {
+      const profileData = JSON.parse(profileDataRaw);
+      const fullName = [
+        profileData.surnameLatin,
+        profileData.nameLatin,
+        profileData.patronymicLatin
+      ].filter(Boolean).join(" ");
+
+      const nameEl = document.getElementById("profile-name");
+      if (fullName && nameEl) {
+        nameEl.textContent = fullName;
+      }
+
+      const roleEl = document.getElementById("profile-role");
+      if (roleEl && profileData.phone) {
+        roleEl.textContent = String(profileData.phone);
+      }
+
+      const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el && value !== undefined && value !== null && value !== "") {
+          el.textContent = String(value);
+        }
+      };
+
+      setText("user-pin", profileData.pin);
+      setText("user-document", profileData.document);
+      setText("user-birthdate", profileData.birthDate);
+      setText("user-birthplace", profileData.birthPlace);
+      setText("user-citizenship", profileData.citizenship);
+
+      const storedPhoto = sessionStorage.getItem("oneIdPhoto");
+      if (storedPhoto) {
+        const photoEl = document.getElementById("profile-photo");
+        if (photoEl) {
+          photoEl.style.backgroundImage = `url("data:image/jpeg;base64,${storedPhoto}")`;
+        }
+      }
+    } catch (error) {
+      // ignore parse errors
+    }
+  }
+  const businessProfileRaw = getCookie("businessProfile");
+  if (businessProfileRaw) {
+    try {
+      const businessProfile = JSON.parse(businessProfileRaw);
+      const setBizText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el && value) {
+          el.textContent = String(value);
+        }
+      };
+
+      setBizText("biz-type", businessProfile.businessType);
+      setBizText("biz-sector", businessProfile.sector);
+      const benefitValue = Array.isArray(businessProfile.benefitType)
+        ? businessProfile.benefitType.join(", ")
+        : businessProfile.benefitType;
+      setBizText("biz-benefit", benefitValue);
+    } catch (error) {
+      // ignore parse errors
+    }
+  }
+</script>
+</div>
+</body></html>
+
+
+
+

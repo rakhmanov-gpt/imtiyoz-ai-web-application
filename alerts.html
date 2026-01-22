@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bildirishnomalar - AI Tadbirkor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="fonts/css/satoshi.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Satoshi-Regular", "Satoshi-Variable", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Satoshi-Regular', 'Satoshi-Variable', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white">
+<div class="relative flex min-h-screen min-h-[100dvh] w-full flex-col max-w-[430px] mx-auto bg-white dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-10 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<button class="text-[#111318] dark:text-white flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" type="button" onclick="history.back()">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Bildirishnomalar</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-primary hover:bg-primary/10 transition-colors" title="Hammasini o'qilgan deb belgilash">
+<span class="material-symbols-outlined">done_all</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-20">
+<!-- SegmentedButtons -->
+<div class="sticky top-0 z-[5] bg-white dark:bg-background-dark p-4">
+<div class="flex h-11 flex-1 items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-gray-500 dark:text-gray-400 text-sm font-semibold leading-normal transition-all">
+<span class="truncate">Hammasi</span>
+<input checked="" class="invisible w-0" name="filter" type="radio" value="Hammasi"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-gray-500 dark:text-gray-400 text-sm font-semibold leading-normal transition-all">
+<span class="truncate">Soliqlar</span>
+<input class="invisible w-0" name="filter" type="radio" value="Soliqlar"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-gray-500 dark:text-gray-400 text-sm font-semibold leading-normal transition-all">
+<span class="truncate">Grantlar</span>
+<input class="invisible w-0" name="filter" type="radio" value="Grantlar"/>
+</label>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 px-1">Bugun</h3>
+<!-- ListItem: Tax Exemption Alert -->
+<div class="group flex items-center gap-4 bg-white dark:bg-gray-900/50 px-4 min-h-[88px] py-3 rounded-2xl mb-3 border border-transparent hover:border-primary/20 hover:bg-primary/5 transition-all shadow-sm">
+<div class="flex items-center gap-4 flex-1">
+<div class="text-red-600 flex items-center justify-center rounded-xl bg-red-50 dark:bg-red-900/20 shrink-0 size-12 border border-red-100 dark:border-red-900/30">
+<span class="material-symbols-outlined">percent</span>
+</div>
+<div class="flex flex-col justify-center gap-1">
+<p class="text-[#111318] dark:text-gray-100 text-[15px] font-semibold leading-tight line-clamp-2">Soliq imtiyozi muddati tugashiga 7 kun qoldi</p>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-red-500 bg-red-50 dark:bg-red-900/20 px-2 py-0.5 rounded">Soliq</span>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-normal">5 daqiqa avval</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<div class="size-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(17,82,212,0.5)]"></div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">chevron_right</span>
+</div>
+</div>
+<!-- ListItem: New Grant Alert -->
+<div class="group flex items-center gap-4 bg-white dark:bg-gray-900/50 px-4 min-h-[88px] py-3 rounded-2xl mb-3 border border-transparent hover:border-primary/20 hover:bg-primary/5 transition-all shadow-sm">
+<div class="flex items-center gap-4 flex-1">
+<div class="text-green-600 flex items-center justify-center rounded-xl bg-green-50 dark:bg-green-900/20 shrink-0 size-12 border border-green-100 dark:border-green-900/30">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div class="flex flex-col justify-center gap-1">
+<p class="text-[#111318] dark:text-gray-100 text-[15px] font-semibold leading-tight line-clamp-2">Sizga mos yangi grant e’lon qilindi</p>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-green-600 bg-green-50 dark:bg-green-900/20 px-2 py-0.5 rounded">AI Tavsiyasi</span>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-normal">2 soat avval</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<div class="size-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(17,82,212,0.5)]"></div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">chevron_right</span>
+</div>
+</div>
+<h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-6 mb-2 px-1">Kecha</h3>
+<!-- ListItem: Law Discussion -->
+<div class="group flex items-center gap-4 bg-white dark:bg-gray-900/50 px-4 min-h-[88px] py-3 rounded-2xl mb-3 border border-transparent hover:border-primary/20 transition-all opacity-80">
+<div class="flex items-center gap-4 flex-1">
+<div class="text-blue-600 flex items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-900/20 shrink-0 size-12">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<div class="flex flex-col justify-center gap-1">
+<p class="text-[#111318] dark:text-gray-100 text-[15px] font-medium leading-tight line-clamp-2">Yangi qonun loyihasi muhokamasi boshlandi</p>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-blue-600 bg-blue-50 dark:bg-blue-900/20 px-2 py-0.5 rounded">Qonunchilik</span>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-normal">Kecha, 14:20</p>
+</div>
+</div>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">chevron_right</span>
+</div>
+</div>
+<!-- ListItem: Business Grant -->
+<div class="group flex items-center gap-4 bg-white dark:bg-gray-900/50 px-4 min-h-[88px] py-3 rounded-2xl mb-3 border border-transparent hover:border-primary/20 transition-all opacity-80">
+<div class="flex items-center gap-4 flex-1">
+<div class="text-amber-600 flex items-center justify-center rounded-xl bg-amber-50 dark:bg-amber-900/20 shrink-0 size-12">
+<span class="material-symbols-outlined">briefcase_meal</span>
+</div>
+<div class="flex flex-col justify-center gap-1">
+<p class="text-[#111318] dark:text-gray-100 text-[15px] font-medium leading-tight line-clamp-2">Kichik biznes uchun imtiyozli kreditlar</p>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-amber-600 bg-amber-50 dark:bg-amber-900/20 px-2 py-0.5 rounded">Grant</span>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-normal">Kecha, 09:15</p>
+</div>
+</div>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">chevron_right</span>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white/80 dark:bg-[#1a2130]/80 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 px-6 py-3 pb-8 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-gray-400" href="dashboard.html">
+<span class="material-symbols-outlined text-[26px]">grid_view</span>
+<span class="text-[10px] font-bold">Asosiy</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="alerts.html">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+<span class="text-[10px] font-bold">Imtiyozlar</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="ai-chat.html">
+<div class="bg-primary size-12 rounded-full flex items-center justify-center text-white shadow-lg -mt-8 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-[28px]">smart_toy</span>
+</div>
+<span class="text-[10px] font-medium">AI Assistant</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="saved.html">
+<span class="material-symbols-outlined text-[26px]">bookmark</span>
+<span class="text-[10px] font-medium">Saqlangan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="profile.html">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</div>
+</body></html>
+
+
+

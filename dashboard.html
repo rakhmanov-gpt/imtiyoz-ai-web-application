@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Dashboard Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="fonts/css/satoshi.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Satoshi-Regular", "Satoshi-Variable", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Satoshi-Regular', 'Satoshi-Variable', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full max-w-[430px] mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-50 flex items-center bg-white dark:bg-[#1a2130] p-4 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex size-10 shrink-0 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/10" data-alt="User profile avatar photo" id="dashboard-avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTSoD2XjsFZ3Ynz8hRTZBL1bZUMZ1YZ8ri4FRWdTY5PrOzgKKZIQk3v9j4rpAbivOvsKw4XIXKsk5XV5-nW7sJryQQoCHCTmJ8JLIj3twulJHe07ulOFuxp6er1vjV16pvG03L9x2OowLDBOl8PYtlCPgQ2q5pLWumCFc532vQrKGCA01HontykMIFJXDoH10-ywaPn_PsL4JX1K_QTg5pvKegwRbEu8WMbqp6chCIdSoiVUnAkpVTlcMCY6m2LgGbv5O4x2hGYk93");'></div>
+</div>
+<h2 class="text-primary dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 px-3" id="dashboard-name">Tadbirkor Dashboard</h2>
+<div class="flex items-center gap-2">
+<a class="flex size-10 cursor-pointer items-center justify-center rounded-full bg-background-light dark:bg-gray-800 text-[#111318] dark:text-white" href="search.html">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</a>
+<a class="flex size-10 cursor-pointer items-center justify-center rounded-full bg-background-light dark:bg-gray-800 text-[#111318] dark:text-white relative" href="alerts.html">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-red-500"></span>
+</a>
+</div>
+</div>
+<!-- HeadlineText -->
+<div class="p-4">
+<h3 class="text-[#111318] dark:text-white tracking-tight text-2xl font-bold leading-tight">
+                Assalomu alaykum, <br/>sizga mos imtiyozlar tayyor
+            </h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Bugungi yangilanishlar va takliflar bilan tanishing</p>
+</div>
+<!-- Stats Section -->
+<div class="flex flex-wrap gap-3 p-4">
+<!-- Card 1: Mos imtiyozlar -->
+<div class="flex min-w-[120px] flex-1 flex-col gap-2 rounded-xl p-4 bg-primary text-white shadow-lg shadow-primary/20">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-[20px] opacity-80">check_circle</span>
+</div>
+<div class="mt-1">
+<p class="text-white/80 text-xs font-medium uppercase tracking-wider">Mos keluvchi</p>
+<p class="text-white tracking-tight text-2xl font-bold leading-tight">12 ta</p>
+</div>
+</div>
+<!-- Card 2: Yangi imtiyozlar -->
+<div class="flex min-w-[120px] flex-1 flex-col gap-2 rounded-xl p-4 bg-white dark:bg-[#1a2130] border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex items-center justify-between text-emerald-500">
+<span class="material-symbols-outlined text-[20px]">new_releases</span>
+</div>
+<div class="mt-1">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wider">Yangi</p>
+<p class="text-[#111318] dark:text-white tracking-tight text-2xl font-bold leading-tight">3 ta</p>
+</div>
+</div>
+<!-- Card 3: Muddat tugayotganlar -->
+<div class="flex min-w-[120px] flex-1 flex-col gap-2 rounded-xl p-4 bg-white dark:bg-[#1a2130] border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex items-center justify-between text-orange-500">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</div>
+<div class="mt-1">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wider">Muddati</p>
+<p class="text-[#111318] dark:text-white tracking-tight text-2xl font-bold leading-tight">2 ta</p>
+</div>
+</div>
+</div>
+<!-- SectionHeader -->
+<div class="flex items-center justify-between p-4">
+<h2 class="text-[#111318] dark:text-white text-xl font-bold leading-tight tracking-tight">Siz uchun tavsiyalar</h2>
+<button class="text-primary text-sm font-medium">Barchasi</button>
+</div>
+<!-- Recommendations Feed -->
+<div class="flex flex-col gap-4 p-4 pb-24">
+<!-- Card 1 -->
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1a2130] shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="h-32 w-full bg-center bg-no-repeat bg-cover" data-alt="Modern office building representation" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZ9bacLUy3QNbx_1W-S7B3O17NxVAGfF8kaTuJovcy5qivBaIu0JFw08VVjfmlOi2oNFvJh1YyMRADlnNwOWznvGXcGkCbEeeycA2ZwAh-TdP-OLULdlHAIuZkEOMol_xiHRo1bxPKczg-CksL97c1f1lHVDzq2UnyGz0Ib4apNhnPWbW8tSpGNdqsZNMTqtRhEsGupOoFs3-3jLGkvaFnE6jqj1Bl19xgF0qT9dY7zwdhiZVJud7miPEA-oRo4tfGXyi5Cwy5aZYQ");'></div>
+<div class="p-4">
+<div class="flex items-start justify-between gap-4 mb-3">
+<div class="flex flex-col gap-1">
+<span class="text-primary bg-primary/10 w-fit px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide">Soliq imtiyozi</span>
+<p class="text-[#111318] dark:text-white text-base font-bold leading-tight">IT-Park rezidentlari uchun ijtimoiy soliq</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-normal">Soliq stavkasi 12% dan 1% gacha kamaytirilgan</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-3 border-t border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-2 text-gray-400">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="text-xs">2026-yilgacha</span>
+</div>
+<a class="flex items-center justify-center rounded-lg h-9 px-5 bg-primary text-white text-sm font-medium transition-opacity hover:opacity-90" href="benefits.html">
+                            Batafsil
+                        </a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-[#1a2130] p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex flex-[2_2_0px] flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 w-fit px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide">Eksportni qo'llab-quvvatlash</span>
+<p class="text-[#111318] dark:text-white text-base font-bold leading-tight">Transport xarajatlarini kompensatsiya qilish</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-normal">70% gacha transport xarajatlari qaytariladi</p>
+</div>
+<button class="mt-4 flex items-center justify-center rounded-lg h-8 px-4 bg-background-light dark:bg-gray-800 text-[#111318] dark:text-white text-xs font-medium w-fit">
+                        Ko'rib chiqish
+                    </button>
+</div>
+<div class="w-24 shrink-0 bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Logistics and cargo icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCa39tp03X8sfmHurFh_gwimD8Kl4GKamjYBhpcNNcueDm6JCwvziGS0QpXQ_dsVDG60E8-Z_d_9QKnpWhcHAPz2KVcHVMY9SxtrlMM2jfuJkxZr5Madi-HgK9gwZV239ok-gSpyUCghI7cXGwGjoQ8drl5GiW0EPiSEYqP5J2Wgj27JmYeJW9NuBfJFEhBPa2XvN2e08xl4GqNt3VSzZk05bKxZmiCyakRJ4-hjX0Gg3dK-irGBNZJHfHxKeHtgKbACvrr4WHXaE67");'></div>
+</div>
+<!-- Card 3 -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-[#1a2130] p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex flex-[2_2_0px] flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-orange-600 bg-orange-50 dark:bg-orange-900/20 w-fit px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide">Yangi korxonalar</span>
+<p class="text-[#111318] dark:text-white text-base font-bold leading-tight">Arenda to'lovlari bo'yicha subsidiya</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-normal">Yosh tadbirkorlar uchun binolar ijarasi</p>
+</div>
+<button class="mt-4 flex items-center justify-center rounded-lg h-8 px-4 bg-background-light dark:bg-gray-800 text-[#111318] dark:text-white text-xs font-medium w-fit">
+                        Ariza topshirish
+                    </button>
+</div>
+<div class="w-24 shrink-0 bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Business lease icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJt0rQN32zZZDKL2YuK8Hon67TYkhj4pK4R7Vw7ABfUWs6sqbn165Xk3smich3J7d5ViyaMxCJ-g70PufavauBF5Gm5o_YCcatCOjyXtHm_hxir6pkXboz1djpwRg_JyApz4TMsbDlCFHvprrm0Y_0DhwDJ_rDlqLgWrphjrDImHGRA8EcYzqct3nnxe2CQ_JuDBUVNBqm99gH-p-Itu8nvPJLSCBmaN5bE7XJVkZtsclOvmsOXkBZgvUXW_f-zCMgaTbDUU8Nc5_u");'></div>
+</div>
+</div>
+<!-- iOS Style Bottom Navigation -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white/80 dark:bg-[#1a2130]/80 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 px-6 py-3 pb-8 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="dashboard.html">
+<span class="material-symbols-outlined text-[26px]">grid_view</span>
+<span class="text-[10px] font-bold">Asosiy</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="alerts.html">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+<span class="text-[10px] font-medium">Imtiyozlar</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="ai-chat.html">
+<div class="bg-primary size-12 rounded-full flex items-center justify-center text-white shadow-lg -mt-8 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-[28px]">smart_toy</span>
+</div>
+<span class="text-[10px] font-medium">AI Assistant</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="saved.html">
+<span class="material-symbols-outlined text-[26px]">bookmark</span>
+<span class="text-[10px] font-medium">Saqlangan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400" href="profile.html">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</div>
+<script>
+  const getCookie = (name) => {
+    const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
+    return match ? decodeURIComponent(match[2]) : "";
+  };
+
+  const businessProfileRaw = getCookie("businessProfile");
+  if (!businessProfileRaw) {
+    window.location.href = "landing-login.html";
+  }
+
+  const dashboardDataRaw = getCookie("oneIdProfile");
+  if (dashboardDataRaw) {
+    try {
+      const dashboardData = JSON.parse(dashboardDataRaw);
+      const fullName = [
+        dashboardData.surnameLatin,
+        dashboardData.nameLatin,
+        dashboardData.patronymicLatin
+      ].filter(Boolean).join(" ");
+
+      const nameEl = document.getElementById("dashboard-name");
+      if (fullName && nameEl) {
+        nameEl.textContent = fullName;
+      }
+
+      const storedPhoto = sessionStorage.getItem("oneIdPhoto");
+      if (storedPhoto) {
+        const avatarEl = document.getElementById("dashboard-avatar");
+        if (avatarEl) {
+          avatarEl.style.backgroundImage = `url("data:image/jpeg;base64,${storedPhoto}")`;
+        }
+      }
+    } catch (error) {
+      // ignore parse errors
+    }
+  }
+</script>
+</body></html>
+
+
+
+
+

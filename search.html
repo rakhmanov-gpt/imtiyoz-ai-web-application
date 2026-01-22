@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uz"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Filters - Imtiyoz.uz</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="fonts/css/satoshi.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Satoshi-Regular", "Satoshi-Variable", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: 'Satoshi-Regular', 'Satoshi-Variable', sans-serif
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+select {
+    appearance: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAysoYchYwLiv6DDfB0EFoWH29zgtEiSM9k17EZB1Yz7u9YWdUMc1F1FUswNzB93cWkgQlIMa-SSW-al0ugpmkM76twlF9GmAey24czbu2n74nDp6_D-fbt8GWugVey1Do_JoVmkc_UwKUJfHAE7PHUXgGg14QeYqbTDBVRroLM0khIqMEvPeb3WZFMZoWD4vl8NFSMQvSG72cpk1025FhVA1NLQG1et7myA1mp7pFznp_tMxttKRfmkAqa7F7OE2fRPJEeyGArWrQw);
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em
+    }</style>
+<style>
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<!-- Filter Modal/Drawer Overlay -->
+<div class="flex flex-col min-h-screen max-w-[480px] mx-auto bg-white dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 justify-between">
+<button class="text-[#111318] dark:text-white flex size-12 shrink-0 items-center justify-start" type="button" onclick="history.back()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Filtrlash</h2>
+</div>
+<!-- Filter Content -->
+<div class="flex-1 overflow-y-auto p-4 pb-32">
+<!-- Benefit Type (Chips) -->
+<div class="mt-4">
+<h3 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-3">Imtiyoz turi</h3>
+<div class="flex flex-wrap gap-2">
+<button class="benefit-chip px-4 py-2 rounded-full bg-primary text-white text-sm font-medium" type="button">Soliq</button>
+<button class="benefit-chip px-4 py-2 rounded-full bg-background-light dark:bg-gray-800 text-[#111318] dark:text-gray-300 text-sm font-medium border border-[#dbdfe6] dark:border-gray-700" type="button">Grant</button>
+<button class="benefit-chip px-4 py-2 rounded-full bg-background-light dark:bg-gray-800 text-[#111318] dark:text-gray-300 text-sm font-medium border border-[#dbdfe6] dark:border-gray-700" type="button">Subsidiya</button>
+<button class="benefit-chip px-4 py-2 rounded-full bg-background-light dark:bg-gray-800 text-[#111318] dark:text-gray-300 text-sm font-medium border border-[#dbdfe6] dark:border-gray-700" type="button">Imtiyozli kredit</button>
+</div>
+</div>
+<!-- Business Type (Dropdown) -->
+<div class="mt-6">
+<label class="flex flex-col w-full">
+<p class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-3">Biznes turi</p>
+<select class="form-input flex w-full rounded-lg text-[#111318] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-gray-800 h-14 p-4 text-base font-normal leading-normal" id="business-type">
+<option disabled="" selected="" value="">Biznes turini tanlang</option>
+<option value="mchj">MCHJ (Mas'uliyati cheklangan jamiyat)</option>
+<option value="yatt">YaTT (Yakka tartibdagi tadbirkor)</option>
+<option value="okk">OKK (Oilaviy korxona)</option>
+<option value="aj">AJ (Aksiyadorlik jamiyati)</option>
+</select>
+</label>
+</div>
+<!-- Sector (Dropdown) -->
+<div class="mt-6">
+<label class="flex flex-col w-full">
+<p class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-3">Sektor</p>
+<select class="form-input flex w-full rounded-lg text-[#111318] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-gray-800 h-14 p-4 text-base font-normal leading-normal" id="sector">
+<option disabled="" selected="" value="">Sektorni tanlang</option>
+<option value="it">IT va Raqamli texnologiyalar</option>
+<option value="agri">Qishloq xo'jaligi</option>
+<option value="prod">Ishlab chiqarish</option>
+<option value="serv">Xizmat ko'rsatish</option>
+<option value="export">Eksport</option>
+</select>
+</label>
+</div>
+<!-- Region (Dropdown) -->
+<div class="mt-6">
+<label class="flex flex-col w-full">
+<p class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-3">Hudud</p>
+<select class="form-input flex w-full rounded-lg text-[#111318] dark:text-white focus:outline-0 focus:ring-0 border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-gray-800 h-14 p-4 text-base font-normal leading-normal" id="region">
+<option disabled="" selected="" value="">Hududni tanlang</option>
+<option value="tashkent">Toshkent shahri</option>
+<option value="toshkentv">Toshkent viloyati</option>
+<option value="samarkand">Samarqand</option>
+<option value="fergana">Farg'ona</option>
+<option value="andijan">Andijon</option>
+<option value="namangan">Namangan</option>
+<option value="bukhara">Buxoro</option>
+</select>
+</label>
+</div>
+<!-- Special Benefit Status (Toggle switches simulated) -->
+<div class="mt-8 flex flex-col gap-4">
+<div class="flex items-center justify-between py-2">
+<span class="text-[#111318] dark:text-white font-medium">Ayollar tadbirkorligi</span>
+<button class="w-12 h-7 bg-gray-200 dark:bg-gray-700 rounded-full relative" id="toggle-women" type="button" aria-pressed="false">
+<span class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full shadow"></span>
+</button>
+</div>
+<div class="flex items-center justify-between py-2">
+<span class="text-[#111318] dark:text-white font-medium">Yoshlar daftari</span>
+<button class="w-12 h-7 bg-primary rounded-full relative" id="toggle-youth" type="button" aria-pressed="true">
+<span class="absolute right-1 top-1 w-5 h-5 bg-white rounded-full shadow"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] bg-white dark:bg-background-dark border-t border-[#dbdfe6] dark:border-gray-800 p-4 pb-[calc(env(safe-area-inset-bottom)+2rem)] flex flex-col gap-3">
+<button class="w-full h-14 bg-primary text-white rounded-xl font-medium text-base flex items-center justify-center shadow-lg shadow-primary/20" id="filters-apply" type="button">
+                Natijalarni ko'rish
+            </button>
+<button class="w-full h-12 bg-transparent text-[#111318] dark:text-gray-300 rounded-xl font-medium text-base flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" id="filters-clear" type="button">
+                Tozalash
+            </button>
+</div>
+</div>
+<script>
+  const applyButton = document.getElementById("filters-apply");
+  const clearButton = document.getElementById("filters-clear");
+  const toggleWomen = document.getElementById("toggle-women");
+  const toggleYouth = document.getElementById("toggle-youth");
+  const benefitChips = Array.from(document.querySelectorAll(".benefit-chip"));
+
+  const setActiveChip = (activeChip) => {
+    benefitChips.forEach((chip) => {
+      chip.classList.toggle("bg-primary", chip === activeChip);
+      chip.classList.toggle("text-white", chip === activeChip);
+      chip.classList.toggle("bg-background-light", chip !== activeChip);
+      chip.classList.toggle("dark:bg-gray-800", chip !== activeChip);
+      chip.classList.toggle("text-[#111318]", chip !== activeChip);
+      chip.classList.toggle("dark:text-gray-300", chip !== activeChip);
+    });
+  };
+
+  benefitChips.forEach((chip) => {
+    chip.addEventListener("click", () => setActiveChip(chip));
+  });
+
+  const setToggleState = (button, isOn) => {
+    if (!button) return;
+    button.classList.toggle("bg-primary", isOn);
+    button.classList.toggle("bg-gray-200", !isOn);
+    button.classList.toggle("dark:bg-gray-700", !isOn);
+    button.setAttribute("aria-pressed", isOn ? "true" : "false");
+    const knob = button.querySelector("span");
+    if (knob) {
+      knob.classList.toggle("left-1", !isOn);
+      knob.classList.toggle("right-1", isOn);
+    }
+  };
+
+  toggleWomen?.addEventListener("click", () => {
+    const isOn = toggleWomen.getAttribute("aria-pressed") === "true";
+    setToggleState(toggleWomen, !isOn);
+  });
+
+  toggleYouth?.addEventListener("click", () => {
+    const isOn = toggleYouth.getAttribute("aria-pressed") === "true";
+    setToggleState(toggleYouth, !isOn);
+  });
+  applyButton?.addEventListener("click", () => {
+    const businessTypeSelect = document.getElementById("business-type");
+    const sectorSelect = document.getElementById("sector");
+    const regionSelect = document.getElementById("region");
+    const activeChip = document.querySelector(".benefit-chip.bg-primary");
+
+    const getSelectedText = (selectEl) => {
+      if (!selectEl) return "";
+      const option = selectEl.options[selectEl.selectedIndex];
+      return option && !option.disabled ? option.textContent.trim() : "";
+    };
+
+    const payload = {
+      benefitType: activeChip ? activeChip.textContent.trim() : "",
+      businessType: getSelectedText(businessTypeSelect),
+      sector: getSelectedText(sectorSelect),
+      region: getSelectedText(regionSelect)
+    };
+
+    document.cookie = `businessProfile=${encodeURIComponent(JSON.stringify(payload))}; path=/; max-age=1209600`;
+  });
+
+  clearButton?.addEventListener("click", () => {
+    document.getElementById("business-type")?.selectedIndex = 0;
+    document.getElementById("sector")?.selectedIndex = 0;
+    document.getElementById("region")?.selectedIndex = 0;
+    setActiveChip(benefitChips[0]);
+    setToggleState(toggleWomen, false);
+    setToggleState(toggleYouth, true);
+  });
+</script>
+</body></html>
+
+
+
+
